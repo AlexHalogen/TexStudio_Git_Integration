@@ -1,0 +1,1 @@
+# TexStudio_Git_Integration
