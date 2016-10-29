@@ -16,11 +16,13 @@ branchName = statusMessage.trim()
 dialog = new UniversalInputDialog()
 dialog.setWindowTitle("Git Commit/Push")
 dialog.add(true, "Push to remote repo","push")
-dialog.add(branchName, "Branch", "branch")
 dialog.add(commitString, "Comment","comment")
+dialog.add(branchName, "Branch", "branch")
 dialog.add(true, "Commit all Files","allfiles")
 
-if (dialog.exec() != null) {
+accepted = dialog.exec()
+
+if ( accepted != null && accepted != 0) {
     
     comment = dialog.get("comment")
     
